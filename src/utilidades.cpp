@@ -1,27 +1,27 @@
 //
 // Created by mgomez on 16/02/17.
 // editado by acid on 27/02/19
-//
+//hi?
 
 #include "utilidades.h"
 using namespace std;
 
 void leerContenido(Valor coleccion[], int & util){
-    int fila,columna; 
+    int fila,columna;
     double valor;
     cout << "Nuevo vector" << endl;
     do{
       cout << "Introduce cuantos: ";
       cin >> util;
     }while (util > CAPACIDAD/2);
-    
+
     for(int i = 0; i < util; i++){
         cin >> fila;
         cin >> columna;
         cin >> valor;
         coleccion[i]= Valor(fila, columna, valor);
-    } 
-    
+    }
+
 }
 
 void mostrarContenido(Valor const coleccion[], int util){
@@ -51,7 +51,7 @@ int combinarSuma(Valor vec1[], int util1, Valor vec2[], int util2, Valor result[
                     result[i].fila=vec1[i].fila;
                     result[i].columna=vec1[i].columna;
                     result[i].valor=vec1[i].valor + vec2[e].valor;
-                    
+
                     find=true;
                     util_result++;
                 }
@@ -85,7 +85,7 @@ int combinarSuma(Valor vec1[], int util1, Valor vec2[], int util2, Valor result[
                 util_result++;
             }
         }
-        
+
     //en caso contrario compruebo si el vector 1 o 2 no esta vacio y guardo el vector 1 o 2 en el vector result
     }else if(util1>0){
         util_result=util1;
